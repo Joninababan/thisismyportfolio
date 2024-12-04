@@ -1,476 +1,1168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Portfolio | Joni Nababan</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joni Mustova Nababan</title>
 
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" href="assets/img/favicon.ico" /> 
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+  <!--
+    - custom css link
+  -->
+
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" /> 
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/mystyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+
+  <style>
+    .modal__slider {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .modal__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+    }
+
+    .modal__img--active {
+        display: block;
+    }
+
+    .modal__prev, .modal__next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .modal__prev {
+        left: 10px;
+    }
+
+    .modal__next {
+        right: 10px;
+    }
+  </style>
+
 </head>
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Joni Nababan</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars ml-1"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skill">Skill</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                   
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-    
-    <header class="masthead">
-        <div class="container">
-             <div class="masthead-heading text-uppercase">Welcome To My Portfolio</div>
-            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">View More</a>
-        </div>
-    </header>
-    <!-- About -->
-    <section class="page-section" id="about">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">About</h2>
 
-            </div>
-            <div class="row text-center">
-                <h3 class="section-subheading text-muted">My name is Joni Mustova Nababan. I’m a software developer who thrives on exploring the latest technologies and trends. With a background in 3 years in development, I love diving into new challenges and creating cutting-edge solutions that push the boundaries of what’s possible.
-                </h3>
+<body>
 
-            </div>
-        </div>
-    </section>
-    <!-- Skill-->
-    <section class="page-section bg-light" id="skill">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Skill</h2>
-                <h3 class="section-subheading text-muted">
-                List of my skills</h3>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fab fa-html5 fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">HTML</h4>
-                    <p class="text-muted">Hypertext Markup Language (HTML) is the standard markup language for documents designed to code in internet browsers.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fab fa-css3-alt fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">CSS</h4>
-                    <p class="text-muted">Cascading Style Sheet (CSS) is a rule for arranging several components in a web so that it will be more structured and uniform.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fab fa-js-square fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Javascript</h4>
-                    <p class="text-muted">
-                    JavaScript is a programming language used to create dynamic and interactive web pages.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fab fa-php fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">PHP</h4>
-                    <p class="text-muted">
-                    Hypertext Preprocessor (PHP) is a scripting language that can be embedded or pasted into HTML.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fab fa-wordpress fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Wordpress</h4>
-                    <p class="text-muted">
-                    WordPress is a source application built with the PHP programming language and MySQL database.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fab fa-python fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Python</h4>
-                    <p class="text-muted">
+  <!--
+    - #MAIN
+  -->
 
-                    Python is an interpreted, general-purpose, high-level programming language.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-database fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">MySql</h4>
-                    <p class="text-muted">
-                    MySQL is a multi-channel and multi-user SQL database management system software.</p>
-                </div>
+  <main>
 
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fab fa-laravel fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Laravel</h4>
-                    <p class="text-muted">
-                    Laravel is an open source PHP-based web application framework, using the Model-View-Controller concept.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-code fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">API</h4>
-                    <p class="text-muted">
-                    Application Programming Interface (API) is a set of definitions and protocols for building and integrating application software.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fab fa-java fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Java</h4>
-                    <p class="text-muted">Java is a programming language that can be run on various computers including mobile phones.
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Matlab</h4>
-                    <p class="text-muted">
-                    MATLAB is a numerical computing environment and fourth generation computer programming language.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fab fa-git fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Git</h4>
-                    <p class="text-muted">
-                    Git is a version control software or code management software project.</p>
-                </div>
-            </div>
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/Graduation Photo.jpg" style="border-radius: 10%;" alt="Joni Mustova Nababan" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h5 class="name" title="Joni Mustova Nababan">Joni Mustova Nababan</h5>
+
+          <p class="title">Web developer</p>
         </div>
-    </div>
-</section>
-<!-- Portfolio Grid-->
-<section class="page-section bg-light" id="portfolio">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Portfolio</h2>
-            <h3 class="section-subheading text-muted">List of my projects</h3>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/indextobasa.png" alt="" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <br>
-                        <div class="portfolio-caption-heading">Letsgotobasa</div>
-                        <div class="portfolio-caption-subheading text-muted">Platform : PHP, MySql</div>
-                    </div>
-                </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/index.png" alt="" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Scholarship</div>
-                        <div class="portfolio-caption-subheading text-muted">Platform : Yii2, MySql</div>
-                      
-                    </div>
-                </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:jonymnababan@gmail.com" class="contact-link">jonymnababan@gmail.com</a>
             </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/indexlaporan.png" alt="" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Satuan Penjamin Mutu (SPM)</div>
-          <div class="portfolio-caption-subheading text-muted">Platform : Laravel, API, MySql</div>
-                    </div>
-                </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
             </div>
-            <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                <div class="portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/hasil.png" alt="" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Tugas Akhir</div>
-                        <div class="portfolio-caption-subheading text-muted">Platform : Matlab, Ms.Excel</div>
-                    </div>
-                </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+6287732965709" class="contact-link">+6287732965709</a>
             </div>
-           
-    
-        </div>
-    </div>
-</section>
-<!-- Education-->
-<section class="page-section" id="education">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Education</h2>
-            <h3 class="section-subheading text-muted">List of my educations</h3>
-        </div>
-        <ul class="timeline">
-            <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/sd.png" alt="" /></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>2005-2011</h4>
-                        <h4 class="subheading">Primary School</h4>
-                    </div>
-                    <div class="timeline-body"><p class="text-muted">SD Bintang Kejora Lintongnihuta</p></div>
-                </div>
-            </li>
-            <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/smp.jpg" alt="" /></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>2011 - 2014</h4>
-                        <h4 class="subheading">Junior High School</h4>
-                    </div>
-                    <div class="timeline-body"><p class="text-muted">SMP Negeri 1 Lintongnihuta</p></div>
-                </div>
-            </li>
-            <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/smk.jpg" alt="" /></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>2014 - 2017</h4>
-                        <h4 class="subheading">Vocational High School</h4>
-                    </div>
-                    <div class="timeline-body"><p class="text-muted">SMK Telkom Sandhy Putra Medan</p></div>
-                </div>
-            </li>
-            <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/kuliah.jpg" alt="" /></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>2017 - 2020</h4>
-                        <h4 class="subheading">D3 Information Technology</h4>
-                    </div>
-                    <div class="timeline-body"><p class="text-muted">Institut Teknologi Del</p></div>
-                </div>
-            </li>
-    
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1999-02-25">February 25, 1999</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Cengkareng, Jakarta Barat, Indonesia</address>
+            </div>
+
+          </li>
+
         </ul>
-    </div>
-</section>
 
-<!-- Footer-->
-<footer class="footer py-4">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-4 text-lg-left">Phone Number : +6282240783921</div>
-            <div class="col-lg-4 my-3 my-lg-0">
-         
-                <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/joni-nababan-4a928b1b8/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <div class="col-lg-4 text-lg-right">
-         Email : jonymnababan@gmail.com
-               
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- Portfolio Modals-->
-<!-- Modal 1-->
-<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-            <div class="container">
-                <div class="row">
-                    <div>
-                      <h2 class="text-uppercase">Letsgotoba</h2>
-                      <div class="modal-body">
-                        <!-- Project Details Go Here-->
-                        <div class="col-md-12 col-lg-12">
-                            <img class="img-fluid col-md-5" src="assets/img/login.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/indextobasa.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/destinasi.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/transportasi.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/kuliner.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/souvenir.png" alt="" />
-                        </div>
-                    </div>
-                    <p>The web application is used to rent a car and view tourist and culinary locations around the Toba Samosir area and in the web application you can also purchase souvenirs.</p>
-                    <ul class="list-inline">
-                        <li>Year: 2018</li>
-                        <li>Platform: PHP, MySql</li>
-                        <li>Link : <a href="https://github.com/Joninababan/letsgotobasa" target="_blank">https://github.com/Joninababan/letsgotobasa</a></li>
-                    </ul>
-                    <button class="btn btn-danger" data-dismiss="modal" type="button">
-                        <i class="fas fa-times mr-1"></i>
-                        Close Project
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<!-- Modal 2-->
-<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-            <div class="container">
-                <div class="row">
-                    <div>
-                      <h2 class="text-uppercase">Scholarship</h2>
-                      <div class="modal-body">
-                        <!-- Project Details Go Here-->
-                        <div class="col-md-12 col-lg-12">
-                            <img class="img-fluid col-md-5" src="assets/img/index.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/createscholarship.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/createdonatur.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/detail.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/request.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/uploadberkas.png" alt="" />
-                        </div>
-                    </div>
-                    <p>The web application is used for scholarship management where students can request existing scholarships. The web application can also upload files and there is a data export feature to Ms.Excel.</p>
-                    <ul class="list-inline">
-                        <li>Year: 2019</li>
-                        <li>Platform: Yii2, MySql</li>
-                        <li>Link : <a href="https://github.com/Joninababan/scholarship" target="_blank">https://github.com/Joninababan/scholarship</a></li>
-                    </ul>
-                    <button class="btn btn-danger" data-dismiss="modal" type="button">
-                        <i class="fas fa-times mr-1"></i>
-                        Close Project
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<!-- Modal 3-->
-<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-            <div class="container">
-                <div class="row">
-                    <div>
-                      <h2 class="text-uppercase">Satuan Penjamin Mutu</h2>
-                      <div class="modal-body">
-                        <!-- Project Details Go Here-->
-                        <div class="col-md-12 col-lg-12">
-                            <img class="img-fluid col-md-5" src="assets/img/indexlaporan.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/createlaporan.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/detaillaporan.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/revisi.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/dafrevisi.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/audit.png" alt="" />
-                        </div>
-                    </div>
-                    <p>The Web Application help each unit to create, view, update, delete reports and help each unit revise reports also assist the quality assurance unit to approve or reject reports from each unit.</p>
-                    <ul class="list-inline">
-                        <li>Year: 2020</li>
-                        <li>Platform: Laravel, API, lumen, MySql</li>
-                        <li>Link : <a href="https://github.com/Joninababan/satuanpenjaminmutu" target="_blank">https://github.com/Joninababan/satuanpenjaminmutu</a></li>
-                    </ul>
-                    <button class="btn btn-danger" data-dismiss="modal" type="button">
-                        <i class="fas fa-times mr-1"></i>
-                        Close Project
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<!-- Modal 4-->
-<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-            <div class="container">
-                <div class="row">
-                    <div>
-                      <h2 class="text-uppercase">Tugas Akhir</h2>
-                      <div class="modal-body">
-                        <!-- Project Details Go Here-->
-                        <div class="col-md-12 col-lg-12">
-                            <img class="img-fluid col-md-5" src="assets/img/ui.png" alt="" />
-                            <img class="img-fluid col-md-5" src="assets/img/hasil.png" alt="" />
-                         
-                        </div>
-                    </div>
-                    <p>Desktop application to process data on student data and the application can decide which students are eligible for scholarships. Application focuses on using genetic algorithms and fuzzy logic.</p>
-                    <ul class="list-inline">
-                        <li>Year: 2020</li>
-                        <li>Platform: Matlab, Ms.Office</li>
-                        <li>Link : <a href="https://github.com/Joninababan/TA-D3TI-01" target="_blank">https://github.com/Joninababan/TA-D3TI-01</a></li>
-                    </ul>
-                    <button class="btn btn-danger" data-dismiss="modal" type="button">
-                        <i class="fas fa-times mr-1"></i>
-                        Close Project
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+        <div class="separator"></div>
 
-<!-- Bootstrap core JS-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-<!-- Third party plugin JS-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<!-- Contact form JS-->
+        <ul class="social-list">
 
-<!-- Core theme JS-->
-<script src="js/scripts.js"></script>
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li> -->
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+
+          <p>
+            My name is Joni Mustova Nababan. I’m a software developer who thrives on exploring the latest technologies and trends. With a background in 3 years in development, I love diving into new challenges and creating cutting-edge solutions that push the boundaries of what’s possible.
+          </p>
+
+          <p>
+            I have experience working on various projects, building web applications, developing APIs, and Integrating systems. Each project has provided me with an opportunity to grow both technically and in terms of project management.
+          </p>
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My Skills</h3>
+        
+          <ul class="skills-list content-card">
+        
+            <!-- Skill 1 -->
+            <li class="skills-item">
+              <div class="skill-wrapper">
+                <i class="icon-python"></i>
+                <h5 class="h5">Python</h5>
+              </div>
+            </li>
+        
+            <!-- Skill 2 -->
+            <li class="skills-item">
+              <div class="skill-wrapper">
+                <i class="icon-php"></i>
+                <h5 class="h5">PHP</h5>
+              </div>
+            </li>
+        
+            <!-- Skill 3 -->
+            <li class="skills-item">
+              <div class="skill-wrapper">
+                <i class="icon-django"></i>
+                <h5 class="h5">Django</h5>
+              </div>
+            </li>
+        
+            <!-- Skill 4 -->
+            <li class="skills-item">
+              <div class="skill-wrapper">
+                <i class="icon-laravel"></i>
+                <h5 class="h5">Laravel</h5>
+              </div>
+            </li>
+        
+            <!-- Skill 5 -->
+            <li class="skills-item">
+              <div class="skill-wrapper">
+                <i class="icon-yii2"></i>
+                <h5 class="h5">Yii2</h5>
+              </div>
+            </li>
+        
+            <!-- Skill 6 -->
+            <li class="skills-item">
+              <div class="skill-wrapper">
+                <i class="icon-rest-api"></i>
+                <h5 class="h5">REST API</h5>
+              </div>
+            </li>
+        
+            <!-- Skill 7 -->
+            <li class="skills-item">
+              <div class="skill-wrapper">
+                <i class="icon-odoo"></i>
+                <h5 class="h5">Odoo</h5>
+              </div>
+            </li>
+        
+            <!-- Skill 8 -->
+            <li class="skills-item">
+              <div class="skill-wrapper">
+                <i class="icon-java"></i>
+                <h5 class="h5">Java</h5>
+              </div>
+            </li>
+        
+            <!-- Skill 9 -->
+            <li class="skills-item">
+              <div class="skill-wrapper">
+                <i class="icon-aws"></i>
+                <h5 class="h5">AWS</h5>
+              </div>
+            </li>
+        
+            <!-- Skill 10 -->
+            <li class="skills-item">
+              <div class="skill-wrapper">
+                <i class="icon-aws"></i>
+                <h5 class="h5">Git</h5>
+              </div>
+            </li>
+        
+            <!-- Skill 11 -->
+            <li class="skills-item">
+              <div class="skill-wrapper">
+                <i class="icon-postgresql"></i>
+                <h5 class="h5">PostgreSQL</h5>
+              </div>
+            </li>
+        
+            <!-- Skill 12 -->
+            <li class="skills-item">
+              <div class="skill-wrapper">
+                <i class="icon-mysql"></i>
+                <h5 class="h5">MySQL</h5>
+              </div>
+            </li>
+        
+          </ul>
+        
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <!-- <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div> -->
+
+
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">S1 Information Systems</h4>
+
+              <p class="timeline-text">2022 — 2024</p>
+
+              <p class="timeline-item-titles">
+                Universitas Bina Nusantara
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">D3 Information Technology</h4>
+
+              <p class="timeline-text">2017 — 2020</p>
+
+              <p class="timeline-item-titles">
+                Institut Teknologi Del
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Vacational High School</h4>
+
+              <p class="timeline-text">2014 — 2017</p>
+
+              <p class="timeline-item-titles">
+                SMK Telkom Sandhy Putra Medan
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h3 class="h3 timeline-item-title">Web Developer - PT. Delta Solusi Nusantara</h3>
+
+              <p class="timeline-text">July, 2023 — Present</p>
+
+              <!-- <p class="timeline-text">
+                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
+                molestias
+                exceptur.
+              </p> -->
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h3 class="h3 timeline-item-title">Web Developer - PT. Elevasi Teknologi Cakrawala</h3>
+
+              <p class="timeline-text">March, 2022 — July, 2023</p>
+
+              <!-- <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p> -->
+
+            </li>
+
+          </ol>
+
+        </section>
+
+
+        
+        
+        
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <!-- <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li> -->
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <!-- <li class="project-item  active" data-filter-item data-category="web development">
+              <div class="content-card port-img">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+  
+                  <img src="assets/images/dashboard.png" alt="Inventory" loading="lazy">
+                </figure>
+  
+                <h3 class="project-title">Inventory</h3>
+  
+                <p class="project-category">Web development</p>
+
+              </div>
+
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <div class="content-card port-img">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+  
+                  <img src="assets/images/indextobasa.png" alt="letsgotoba" loading="lazy">
+                </figure>
+  
+                <h3 class="project-title">LetsGoToba</h3>
+  
+                <p class="project-category">Web development</p>
+
+              </div>
+
+            </li> -->
+
+
+            <li class="project-item active" data-filter-item data-category="web development">
+              <div class="content-card port-img">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="assets/images/akurasinventory/dashboard.png" alt="Inventory" loading="lazy">
+                </figure>
+                <h3 class="project-title">Inventory Management</h3>
+                <p class="project-category">Web development</p>
+              </div>
+            </li>
+          
+            <li class="project-item active" data-filter-item data-category="web development">
+              <div class="content-card port-img">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="assets/images/spm-images/indexlaporan.png" alt="Satuan Penjamin Mutu" loading="lazy">
+                </figure>
+                <h3 class="project-title">Satuan Penjamin Mutu</h3>
+                <p class="project-category">Web development</p>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="applications">
+              <div class="content-card port-img">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="assets/images/matlab-images/hasil.png" alt="Beasiswa" loading="lazy">
+                </figure>
+                <h3 class="project-title">Penentuan Penerima Beasiswa</h3>
+                <p class="project-category">App development</p>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web development">
+              <div class="content-card port-img">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="assets/images/spm-images/indexlaporan.png" alt="Beasiswa" loading="lazy">
+                </figure>
+                <h3 class="project-title">Beasiswa</h3>
+                <p class="project-category">Web development</p>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="web development">
+              <div class="content-card port-img">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="assets/images/letsgotoba-images/indextobasa.png" alt="LetsGoToba" loading="lazy">
+                </figure>
+                <h3 class="project-title">LetsGoToba</h3>
+                <p class="project-category">Web development</p>
+              </div>
+            </li>
+          
+            
+
+            
+
+          </ul>
+
+        </section>
+
+
+      </article>
+
+
+     
+
+
+      <!-- Modal for Inventory -->
+      <div class="modal">
+        <div class="modal__card">
+          <i class="ri-close-large-line modal__close"></i>
+
+          <!-- Image Slider Container -->
+          <div class="modal__slider">
+            <img src="assets/images/akurasinventory/dashboard.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/akurasinventory/purchase-index.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/akurasinventory/purchase-view.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/akurasinventory/Purchase-create.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/akurasinventory/transfer-index.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/akurasinventory/movement-index.png" alt="image" class="modal__img" style="object-fit: contain;">
+          </div>
+
+          <!-- Slider Controls -->
+          <button class="modal__prev">&#10094;</button>
+          <button class="modal__next">&#10095;</button>
+
+          <h3 class="modal__name">Manajemen System Inventory</h3>
+          <p class="modal__info">
+            he Inventory Management System is a comprehensive and intuitive platform designed to streamline and optimize the management of inventory, purchasing, and dashboard analysis.
+          </p>
+          <p class="modal__info">
+            Year : 2024 <br/>
+            Platform: Python, Django, Postgresql
+          </p>
+        </div>
+      </div>
+
+      <!-- Modal for SPM -->
+      <div class="modal">
+        <div class="modal__card">
+          <i class="ri-close-large-line modal__close"></i>
+
+          <div class="modal__slider">
+            <img src="assets/images/spm-images/indexlaporan.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/spm-images/detaillaporan.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/spm-images/audit.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/spm-images/createlaporan.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/spm-images/dafrevisi.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/spm-images/revisi.png" alt="image" class="modal__img" style="object-fit: contain;">
+          </div>
+
+          <button class="modal__prev">&#10094;</button>
+          <button class="modal__next">&#10095;</button>
+
+          <h3 class="modal__name">Satuan Penjamin Mutu Project</h3>
+          <p class="modal__info">
+            The Web Application help each unit to create, view, update, delete reports and help each unit revise reports also assist the quality assurance unit to approve or reject reports from each unit.
+          </p>
+          <p class="modal__info">
+            Year : 2020 <br/>
+            Platform: PHP, Laravel, API, Lumen, MySql
+          </p>
+        </div>
+      </div>
+
+      <!-- Modal for matlab -->
+      <div class="modal">
+        <div class="modal__card">
+          <i class="ri-close-large-line modal__close"></i>
+
+          <div class="modal__slider">
+            <img src="assets/images/matlab-images/ui.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/matlab-images/hasil.png" alt="image" class="modal__img" style="object-fit: contain;">
+          </div>
+
+          <button class="modal__prev">&#10094;</button>
+          <button class="modal__next">&#10095;</button>
+
+          <h3 class="modal__name">Penentuan Penerima Beasiswa</h3>
+          <p class="modal__info">
+            Desktop application to process data on student data and the application can decide which students are eligible for scholarships. Application focuses on using genetic algorithms and fuzzy logic.
+          </p>
+          <p class="modal__info">
+            Year : 2020 <br/>
+            Platform: Matlab, Ms.Office
+          </p>
+        </div>
+      </div>
+
+      <!-- Modal for Beasiswa -->
+      <div class="modal">
+        <div class="modal__card">
+          <i class="ri-close-large-line modal__close"></i>
+
+          <div class="modal__slider">
+            <img src="assets/images/beasiswa-images/index.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/beasiswa-images/detail.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/beasiswa-images/createscholarship.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/beasiswa-images/createdonatur.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/beasiswa-images/request.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/beasiswa-images/uploadberkas.png" alt="image" class="modal__img" style="object-fit: contain;">
+          </div>
+
+          <button class="modal__prev">&#10094;</button>
+          <button class="modal__next">&#10095;</button>
+
+          <h3 class="modal__name">Beasiswa Project</h3>
+          <p class="modal__info">
+            The web application is used for scholarship management where students can request existing scholarships. The web application can also upload files and there is a data export feature to Ms.Excel.
+          </p>
+          <p class="modal__info">
+            Year : 2019 <br/>
+            Platform: PHP, Yii2, Mysql
+          </p>
+        </div>
+      </div>
+
+      <!-- Modal for LetsGoToba -->
+      <div class="modal">
+        <div class="modal__card">
+          <i class="ri-close-large-line modal__close"></i>
+
+          <div class="modal__slider">
+            <img src="assets/images/letsgotoba-images/indextobasa.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/letsgotoba-images/login.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/letsgotoba-images/souvenir.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/letsgotoba-images/transportasi.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/letsgotoba-images/kuliner.png" alt="image" class="modal__img" style="object-fit: contain;">
+            <img src="assets/images/letsgotoba-images/destinasi.png" alt="image" class="modal__img" style="object-fit: contain;">
+          </div>
+
+          <button class="modal__prev">&#10094;</button>
+          <button class="modal__next">&#10095;</button>
+
+          <h3 class="modal__name">LetsGoToba Project</h3>
+          <p class="modal__info">
+            The web application is used to rent a car and view tourist and culinary locations around the Toba Samosir area and in the web application you can also purchase souvenirs.
+          </p>
+          <p class="modal__info">
+            Year : 2018 <br/>
+            Platform: PHP, MySql
+          </p>
+
+        </div>
+      </div>
+
+      
+
+
+
+     
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <h2 class="timeline-text">Sorry, Not Available for now.</h2>
+
+        <!-- <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section> -->
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <!-- <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article> -->
+
+
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/main.js"></script>
+
+  <script>
+    let currentImageIndex = 0;
+    const images = document.querySelectorAll('.modal__img');
+    const totalImages = images.length;
+
+    function changeImage(direction) {
+        images[currentImageIndex].classList.remove('modal__img--active');
+        currentImageIndex = (currentImageIndex + direction + totalImages) % totalImages;
+        images[currentImageIndex].classList.add('modal__img--active');
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CFTNTQZ3HN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CFTNTQZ3HN');
+  </script>
+  
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+
 </body>
+
 </html>
