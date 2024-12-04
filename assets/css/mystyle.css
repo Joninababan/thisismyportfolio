@@ -200,6 +200,9 @@ img {
   transform: rotateX(90deg);
   transition: transform .6s;
   box-sizing: border-box; /* Ensures padding is included */
+  overflow-y: auto;
+  margin-top: 20px; /* Set top margin */
+  margin-bottom: 20px; /* Set bottom margin */
 }
 
 .modal__close {
